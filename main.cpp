@@ -39,5 +39,11 @@ List *l = new List();
   } else {
     std::cout << "The list does not contain 'x'\n";
   }
+
+  std::cout << l->toString() << "\n";
+  l->remove(2);
+  std::cout << l->toString() << "\n";
+
+
   return 0;
 }

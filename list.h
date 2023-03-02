@@ -10,6 +10,7 @@ class List{
   void insert(std::string data);
   void insert(int loc, std::string data); //0 indexed
   bool contains(std::string item);
+  void remove(int loc);
   int length();
 
   std::string toString(); // for testing purposes

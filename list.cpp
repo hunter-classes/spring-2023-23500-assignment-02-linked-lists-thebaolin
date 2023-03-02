@@ -61,8 +61,6 @@ void List::insert(int loc, std::string data){
 }
 
 /*
-
-remove(int loc) which will remove an item at the specified locaton
 A destructor
 */
 
@@ -77,6 +75,32 @@ bool List::contains(std::string item){
         walker = walker->getNext();
     }
     return false;
+}
+
+void List::remove(int loc){
+
+    Node *walker, *trailer;
+    walker = this->head; // start of the list
+    trailer = nullptr; // one behind
+
+    while(loc>0 && walker != nullptr){
+        loc--;
+        trailer=walker;
+        walker = walker->getNext();
+    }
+
+    if (walker == nullptr) {
+    throw std::out_of_range("Index out of bounds");
+    }
+
+    //means that the node being removed is the first node, so update head
+    if (trailer == nullptr) {
+        head = walker->getNext();
+    } else {
+        trailer->setNext(walker->getNext());
+    }
+    delete walker;
+    
 }
 /*
   Alternate solution:
