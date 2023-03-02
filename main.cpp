@@ -44,6 +44,9 @@ List *l = new List();
   l->remove(2);
   std::cout << l->toString() << "\n";
 
+  l->~List();
+  std::cout << l->toString() << "\n";
+
 
   return 0;
 }

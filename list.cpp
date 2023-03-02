@@ -6,6 +6,19 @@ List::List(){
   head = nullptr;
 }
 
+List::~List(){
+    Node* current = head;
+    Node* next = nullptr;
+
+    while (current != nullptr) {
+        next = current->getNext();
+        delete current;
+        current = next;
+    }
+
+    head = nullptr;
+}
+
 // insert at the "front" (head)
 void List::insert(std::string data){
   Node *tmp = new Node(data);
