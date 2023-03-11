@@ -20,3 +20,4 @@ Node.o: Node.cpp Node.h
 
 clean:
 	rm -f $(OBJECTS) main tests tests.o
+	
