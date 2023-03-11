@@ -1,5 +1,5 @@
 #include <iostream>
-#include "list.h"
+#include "OList.h"
 
 int main()
 {
@@ -21,7 +21,7 @@ int main()
 //   l->insert(5,"inserted at end");
 //   std::cout << l->toString() << " " << l->length() << "\n";
 
-List *l = new List();
+OList *l = new OList();
   l->insert("a");
   l->insert("b");
   l->insert("c");
@@ -44,7 +44,7 @@ List *l = new List();
   l->remove(2);
   std::cout << l->toString() << "\n";
 
-  l->~List();
+  l->~OList();
   std::cout << l->toString() << "\n";
 
 
