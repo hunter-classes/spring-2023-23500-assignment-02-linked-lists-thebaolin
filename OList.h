@@ -15,6 +15,7 @@ class OList{
   void remove(int loc);
   int length();
 
+  //Node* get(int loc);
   std::string get(int loc);
   std::string toString(); // for testing purposes
 

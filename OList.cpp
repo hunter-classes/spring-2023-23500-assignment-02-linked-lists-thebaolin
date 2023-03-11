@@ -90,17 +90,32 @@ bool OList::contains(std::string item){
     return false;
 }
 
-//returns value at loc
+
+// Node* OList::get(int loc){
+//     Node *walker = head;
+//     int pos = 0;
+//     while(walker != nullptr){
+//         if(pos == loc){
+//             return walker;
+//         }
+//         pos++;
+//         walker = walker->getNext();
+//     }
+//     return nullptr;
+// }
+
 std::string OList::get(int loc){
     Node *walker = head;
     int pos = 0;
+
     while(walker != nullptr){
-        pos++;
         if(pos == loc){
             return walker->getData();
         }
+        pos++;
         walker = walker->getNext();
     }
+
     return "";
 }
 
