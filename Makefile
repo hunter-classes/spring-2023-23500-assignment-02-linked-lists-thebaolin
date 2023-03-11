@@ -19,4 +19,4 @@ main.o: main.cpp OList.h Node.h
 Node.o: Node.cpp Node.h
 
 clean:
-	rm -f $(OBJECTS) main tests.o
+	rm -f $(OBJECTS) main tests tests.o

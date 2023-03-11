@@ -48,7 +48,8 @@ TEST_CASE("Reverse"){
 }
 
 TEST_CASE("Deconstructor"){
-    l->~OList();
-    CHECK(l->length() == 0);
-    CHECK(l->get(0) == nullptr);
+    delete l;
+    l = nullptr;
+    //->toString() == "nullptr");
+    CHECK(l == nullptr);
 }

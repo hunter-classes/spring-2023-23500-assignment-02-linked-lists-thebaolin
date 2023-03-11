@@ -10,7 +10,7 @@ OList::~OList(){
     Node* current = head;
     Node* next = nullptr;
 
-    while (current != nullptr) {
+    while (current != nullptr){
         next = current->getNext();
         delete current;
         current = next;
@@ -19,6 +19,12 @@ OList::~OList(){
     head = nullptr;
 }
 
+std::string OList::getHead(){
+    if (head != nullptr) {
+        return head->getData();
+    }
+    return "";
+}
 
 void OList::insert(std::string data) {
     Node *newNode = new Node(data);
