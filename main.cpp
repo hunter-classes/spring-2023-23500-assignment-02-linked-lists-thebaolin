@@ -22,10 +22,10 @@ int main()
 //   std::cout << l->toString() << " " << l->length() << "\n";
 
 OList *l = new OList();
-  l->insert("a");
-  l->insert("b");
-  l->insert("c");
-  l->insert("d");
+  l->insert("1");
+  l->insert("3");
+  l->insert("2");
+  l->insert("5");
   std::cout << l->toString() << "\n";
   std::cout << l->get(2)<< "\n";
   if (l->contains("b")) {
@@ -44,6 +44,8 @@ OList *l = new OList();
   l->remove(1);
   std::cout << l->toString() << "\n";
 
+  l->reverse();
+  std::cout << l->toString() << "\n";
   l->~OList();
   std::cout << l->toString() << "\n";
 

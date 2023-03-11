@@ -12,6 +12,7 @@ class OList{
   void insert(std::string data);
   void insert(int loc, std::string data); //0 indexed
   bool contains(std::string item);
+  void reverse();
   void remove(int loc);
   int length();
 
