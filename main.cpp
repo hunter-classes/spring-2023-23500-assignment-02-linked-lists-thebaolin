@@ -27,7 +27,7 @@ OList *l = new OList();
   l->insert("c");
   l->insert("d");
   std::cout << l->toString() << "\n";
-  
+  std::cout << l->get(2) << "\n";
   if (l->contains("b")) {
     std::cout << "The list contains 'b'\n";
   } else {
